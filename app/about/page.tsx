@@ -79,9 +79,9 @@ export default function AboutPage() {
 
             <p className="text-base md:text-lg leading-relaxed">
               The Pangasinan Heritage website is developed to
-              showcase and preserve the province's historical,
+              showcase and preserve the province&apos;s historical,
               cultural, and natural treasures. It provides useful
-              information about Pangasinan's heritage sites and
+              information about Pangasinan&apos;s heritage sites and
               encourages visitors to discover the beauty and
               history of the province.
             </p>
@@ -203,7 +203,7 @@ export default function AboutPage() {
             <div className="p-5">
 
               <h3 className="font-bold text-lg text-[#123f7b]">
-                Balungao's Hot Spring
+                Balungao&apos;s Hot Spring
               </h3>
 
               <p className="text-sm text-[#45679f] mt-2 leading-relaxed">

@@ -1,5 +1,4 @@
 "use client";
-import HeritageCard from "@/components/molecules/HeritageCard";
 import Image from "next/image";
 import Link from "next/link";
 
@@ -84,7 +83,7 @@ export default function Home() {
 
             {/* DESCRIPTION */}
             <p className="mt-5 text-sm md:text-base text-[#24345c] leading-relaxed max-w-md">
-              Explore the province's iconic destinations,
+              Explore the province&apos;s iconic destinations,
               <br />
               rich culture, and natural wonders.
               <br />
