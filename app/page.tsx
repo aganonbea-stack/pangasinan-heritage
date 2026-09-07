@@ -1,4 +1,5 @@
 "use client";
+
 import Image from "next/image";
 import Link from "next/link";
 
@@ -10,7 +11,6 @@ export default function Home() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-white shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-2 flex items-center justify-between">
 
-          {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
               src="/images/pang logo.png"
@@ -21,7 +21,6 @@ export default function Home() {
             />
           </Link>
 
-          {/* NAV LINKS */}
           <div className="flex items-center gap-8 text-sm font-bold text-gray-900">
             <Link
               href="/"
@@ -44,15 +43,12 @@ export default function Home() {
               About
             </Link>
           </div>
-
         </div>
       </nav>
-
 
       {/* HERO SECTION */}
       <section className="relative min-h-screen flex items-center overflow-hidden">
 
-        {/* LIGHTHOUSE BACKGROUND */}
         <Image
           src="/images/bolinao.jpg"
           alt="Bolinao Lighthouse"
@@ -61,27 +57,21 @@ export default function Home() {
           className="object-cover"
         />
 
-        {/* WHITE / LIGHT FADE OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-white/10"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-white via-white/70 to-white/10" />
 
-        {/* CONTENT */}
         <div className="relative z-10 max-w-6xl mx-auto w-full px-8 pt-20">
-
           <div className="max-w-xl">
 
-            {/* WELCOME BADGE */}
             <div className="inline-block bg-[#4164ad] text-white px-6 py-2 rounded-full text-sm font-bold mb-6">
               Welcome to Pangasinan
             </div>
 
-            {/* MAIN TITLE */}
             <h1 className="text-4xl md:text-5xl font-extrabold text-[#061957] leading-tight">
               Discover Heritage.
               <br />
               Experience Pangasinan.
             </h1>
 
-            {/* DESCRIPTION */}
             <p className="mt-5 text-sm md:text-base text-[#24345c] leading-relaxed max-w-md">
               Explore the province&apos;s iconic destinations,
               <br />
@@ -92,9 +82,7 @@ export default function Home() {
               even with limited mobile data.
             </p>
 
-            {/* BUTTONS */}
             <div className="flex gap-4 mt-7">
-
               <Link
                 href="/heritage"
                 className="bg-[#4164ad] text-white px-6 py-3 rounded-full text-sm font-bold hover:bg-[#304f91] transition shadow-md"
@@ -108,7 +96,6 @@ export default function Home() {
               >
                 Learn More
               </Link>
-
             </div>
 
           </div>

@@ -1,7 +1,5 @@
 /** @type {import('next').NextConfig} */
 
-const isGithubActions = process.env.GITHUB_ACTIONS === "true";
-
 const nextConfig = {
   output: "export",
 
@@ -9,9 +7,7 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  basePath: isGithubActions ? "/pangasinan-heritage" : "",
-
-  assetPrefix: isGithubActions ? "/pangasinan-heritage/" : "",
+  basePath: "/pangasinan-heritage",
 
   trailingSlash: true,
 };
