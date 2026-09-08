@@ -63,6 +63,7 @@ export default async function HeritageDetailPage({
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
 
+          {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
               src={`${basePath}/images/pang-logo.png`}
@@ -70,9 +71,11 @@ export default async function HeritageDetailPage({
               width={65}
               height={65}
               className="object-contain"
+              priority
             />
           </Link>
 
+          {/* NAVIGATION */}
           <nav className="flex items-center gap-3 md:gap-6">
             <Link
               href="/"
@@ -95,6 +98,7 @@ export default async function HeritageDetailPage({
               About
             </Link>
           </nav>
+
         </div>
       </header>
 
@@ -112,7 +116,7 @@ export default async function HeritageDetailPage({
         {/* DETAILS CARD */}
         <article className="bg-white rounded-3xl overflow-hidden shadow-lg">
 
-          {/* IMAGE */}
+          {/* HERITAGE IMAGE */}
           <div className="relative w-full h-[320px] md:h-[500px]">
             <Image
               src={site.image}
@@ -126,23 +130,28 @@ export default async function HeritageDetailPage({
           {/* INFORMATION */}
           <div className="p-7 md:p-12">
 
+            {/* CATEGORY */}
             <span className="inline-block px-4 py-2 rounded-full bg-[#e9effb] text-[#456abd] text-sm font-bold uppercase tracking-wide">
               {site.category}
             </span>
 
+            {/* TITLE */}
             <h1 className="text-4xl md:text-5xl font-bold text-[#123f7b] mt-5">
               {site.name}
             </h1>
 
+            {/* LOCATION */}
             <div className="flex items-center gap-2 mt-4 text-[#456abd]">
               <span className="text-xl">📍</span>
               <span className="text-lg">{site.location}</span>
             </div>
 
+            {/* DESCRIPTION */}
             <p className="text-[#45679f] text-lg leading-relaxed mt-7 max-w-4xl">
               {site.description}
             </p>
 
+            {/* TAGS */}
             <div className="flex flex-wrap gap-3 mt-7">
               {site.tags.map((tag) => (
                 <span
@@ -156,6 +165,7 @@ export default async function HeritageDetailPage({
 
           </div>
         </article>
+
       </section>
 
       {/* FOOTER */}
@@ -164,6 +174,7 @@ export default async function HeritageDetailPage({
 
           <div className="flex flex-col md:flex-row justify-between gap-8">
 
+            {/* LOGO AND DESCRIPTION */}
             <div>
               <Image
                 src={`${basePath}/images/pang-logo.png`}
@@ -178,6 +189,7 @@ export default async function HeritageDetailPage({
               </p>
             </div>
 
+            {/* QUICK LINKS */}
             <div className="flex flex-col gap-2">
               <h4 className="font-bold mb-2">
                 Quick Links
@@ -207,6 +219,7 @@ export default async function HeritageDetailPage({
 
           </div>
 
+          {/* COPYRIGHT */}
           <div className="border-t border-white/20 mt-8 pt-5 text-sm text-white/60">
             © 2026 Pangasinan Heritage. All rights reserved.
           </div>
