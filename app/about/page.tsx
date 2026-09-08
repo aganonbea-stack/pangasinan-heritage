@@ -1,5 +1,9 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
+
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
 
 export default function AboutPage() {
   return (
@@ -12,7 +16,7 @@ export default function AboutPage() {
           {/* LOGO */}
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/pang logo.png"
+              src={`${basePath}/images/pang logo.png`}
               alt="Pangasinan Logo"
               width={65}
               height={65}
@@ -48,23 +52,19 @@ export default function AboutPage() {
         </div>
       </header>
 
-
       {/* ================= HERO ================= */}
       <section className="relative h-[430px] md:h-[500px] overflow-hidden">
 
-        {/* PANGASINAN IMAGE */}
         <Image
-          src="/images/pangasinan.jpg"
+          src={`${basePath}/images/pangasinan.jpg`}
           alt="Pangasinan"
           fill
           priority
           className="object-cover"
         />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-black/45"></div>
+        <div className="absolute inset-0 bg-black/45" />
 
-        {/* HERO CONTENT */}
         <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 h-full flex items-center">
 
           <div className="text-white max-w-xl">
@@ -87,10 +87,8 @@ export default function AboutPage() {
             </p>
 
           </div>
-
         </div>
       </section>
-
 
       {/* ================= ABOUT PANGASINAN ================= */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 py-14">
@@ -101,7 +99,6 @@ export default function AboutPage() {
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
 
-          {/* TEXT */}
           <div>
 
             <h2 className="text-3xl md:text-4xl font-bold text-[#123f7b] mb-6">
@@ -122,12 +119,11 @@ export default function AboutPage() {
 
           </div>
 
-
           {/* CHURCH IMAGE */}
           <div className="relative h-[280px] md:h-[330px] rounded-2xl overflow-hidden shadow-md">
 
             <Image
-              src="/images/manaoag.jpg"
+              src={`${basePath}/images/manaoag.jpg`}
               alt="Pangasinan Heritage"
               fill
               className="object-cover"
@@ -138,7 +134,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* ================= FEATURED DESTINATIONS ================= */}
       <section className="max-w-7xl mx-auto px-6 md:px-10 pb-16">
 
@@ -146,9 +141,7 @@ export default function AboutPage() {
           FEATURED DESTINATIONS
         </h2>
 
-
         <div className="grid md:grid-cols-3 gap-6">
-
 
           {/* CARD 1 */}
           <div className="bg-[#f0f3f8] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
@@ -156,7 +149,7 @@ export default function AboutPage() {
             <div className="relative h-44">
 
               <Image
-                src="/images/alaminos.jpg"
+                src={`${basePath}/images/alaminos.jpg`}
                 alt="Alaminos Hundred Islands"
                 fill
                 className="object-cover"
@@ -185,14 +178,13 @@ export default function AboutPage() {
             </div>
           </div>
 
-
           {/* CARD 2 */}
           <div className="bg-[#f0f3f8] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
 
             <div className="relative h-44">
 
               <Image
-                src="/images/balungao.jpg"
+                src={`${basePath}/images/balungao.jpg`}
                 alt="Balungao Hot Spring"
                 fill
                 className="object-cover"
@@ -221,14 +213,13 @@ export default function AboutPage() {
             </div>
           </div>
 
-
           {/* CARD 3 */}
           <div className="bg-[#f0f3f8] rounded-xl overflow-hidden shadow-md hover:shadow-lg transition">
 
             <div className="relative h-44">
 
               <Image
-                src="/images/bolinao.jpg"
+                src={`${basePath}/images/bolinao.jpg`}
                 alt="Bolinao Lighthouse"
                 fill
                 className="object-cover"
@@ -260,7 +251,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-
       {/* ================= FOOTER ================= */}
       <footer className="bg-[#06265c] text-white">
 
@@ -268,12 +258,11 @@ export default function AboutPage() {
 
           <div className="flex flex-col md:flex-row justify-between gap-10">
 
-
             {/* LOGO + DESCRIPTION */}
             <div>
 
               <Image
-                src="/images/pang logo.png"
+                src={`${basePath}/images/pang logo.png`}
                 alt="Pangasinan Logo"
                 width={80}
                 height={80}
@@ -286,7 +275,6 @@ export default function AboutPage() {
               </p>
 
             </div>
-
 
             {/* QUICK LINKS */}
             <div className="flex flex-col gap-2">
@@ -318,7 +306,6 @@ export default function AboutPage() {
 
             </div>
 
-
             {/* SOCIAL MEDIA */}
             <div>
 
@@ -346,12 +333,9 @@ export default function AboutPage() {
 
           </div>
 
-
           {/* COPYRIGHT */}
           <div className="border-t border-white/20 mt-8 pt-5 text-sm text-white/60 text-center">
-
             © 2026 Pangasinan Heritage. All rights reserved.
-
           </div>
 
         </div>

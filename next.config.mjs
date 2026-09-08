@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const nextConfig = {
   output: "export",
 
@@ -7,7 +9,9 @@ const nextConfig = {
     unoptimized: true,
   },
 
-  basePath: "/pangasinan-heritage",
+  basePath,
+
+  assetPrefix: basePath ? `${basePath}/` : "",
 
   trailingSlash: true,
 };
