@@ -2,13 +2,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+
 const sites = [
   {
     name: "Alaminos Hundred Islands",
     slug: "alaminos-hundred-islands",
     category: "Natural Wonders",
     location: "Alaminos City, Pangasinan",
-    image: "/images/alaminos.jpg",
+    image: `${basePath}/images/alaminos.jpg`,
     description:
       "A famous natural attraction known for its beautiful islands, clear waters, and scenic views. It is one of Pangasinan's most popular tourist destinations.",
     tags: ["Island Hopping", "Nature"],
@@ -18,7 +20,7 @@ const sites = [
     slug: "bolinao-lighthouse",
     category: "Historical Landmarks",
     location: "Bolinao, Pangasinan",
-    image: "/images/bolinao.jpg",
+    image: `${basePath}/images/bolinao.jpg`,
     description:
       "A historic lighthouse overlooking the coast of Bolinao. It offers visitors a beautiful view of the sea and surrounding landscape.",
     tags: ["Heritage", "Sightseeing"],
@@ -28,7 +30,7 @@ const sites = [
     slug: "balungao-hot-spring",
     category: "Natural Wonders",
     location: "Balungao, Pangasinan",
-    image: "/images/balungao.jpg",
+    image: `${basePath}/images/balungao.jpg`,
     description:
       "A relaxing natural destination surrounded by scenic landscapes and refreshing waters, perfect for visitors looking for a peaceful getaway.",
     tags: ["Nature", "Relaxation"],
@@ -56,14 +58,14 @@ export default async function HeritageDetailPage({
 
   return (
     <main className="min-h-screen bg-[#edf2fa] text-[#173f7a]">
-      
+
       {/* HEADER */}
       <header className="sticky top-0 z-50 bg-white border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-6 md:px-10 h-20 flex items-center justify-between">
-          
+
           <Link href="/" className="flex items-center">
             <Image
-              src="/images/pang logo.png"
+              src={`${basePath}/images/pang-logo.png`}
               alt="Pangasinan Logo"
               width={65}
               height={65}
@@ -124,28 +126,23 @@ export default async function HeritageDetailPage({
           {/* INFORMATION */}
           <div className="p-7 md:p-12">
 
-            {/* CATEGORY */}
             <span className="inline-block px-4 py-2 rounded-full bg-[#e9effb] text-[#456abd] text-sm font-bold uppercase tracking-wide">
               {site.category}
             </span>
 
-            {/* TITLE */}
             <h1 className="text-4xl md:text-5xl font-bold text-[#123f7b] mt-5">
               {site.name}
             </h1>
 
-            {/* LOCATION */}
             <div className="flex items-center gap-2 mt-4 text-[#456abd]">
               <span className="text-xl">📍</span>
               <span className="text-lg">{site.location}</span>
             </div>
 
-            {/* DESCRIPTION */}
             <p className="text-[#45679f] text-lg leading-relaxed mt-7 max-w-4xl">
               {site.description}
             </p>
 
-            {/* TAGS */}
             <div className="flex flex-wrap gap-3 mt-7">
               {site.tags.map((tag) => (
                 <span
@@ -169,7 +166,7 @@ export default async function HeritageDetailPage({
 
             <div>
               <Image
-                src="/images/pang logo.png"
+                src={`${basePath}/images/pang-logo.png`}
                 alt="Pangasinan Logo"
                 width={70}
                 height={70}
