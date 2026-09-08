@@ -1,6 +1,11 @@
 /** @type {import('next').NextConfig} */
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || "";
+const isGitHubPages =
+  process.env.GITHUB_ACTIONS === "true";
+
+const basePath = isGitHubPages
+  ? "/pangasinan-heritage"
+  : "";
 
 const nextConfig = {
   output: "export",
